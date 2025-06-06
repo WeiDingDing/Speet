@@ -23,7 +23,7 @@ class SpeetModule : IXposedHookLoadPackage {
             System::class.java,
             "currentTimeMillis",
             object : XC_MethodHook() {
-                override fun beforeHookedMethod(param: MethodHookParam) {
+                override fun beforeHookedMethod(param: XC_MethodHook.MethodHookParam) {
                     param.result = TimeController.getModifiedTime(System.currentTimeMillis())
                 }
             }
@@ -34,7 +34,7 @@ class SpeetModule : IXposedHookLoadPackage {
             System::class.java,
             "nanoTime",
             object : XC_MethodHook() {
-                override fun beforeHookedMethod(param: MethodHookParam) {
+                override fun beforeHookedMethod(param: XC_MethodHook.MethodHookParam) {
                     param.result = TimeController.getModifiedNanoTime(System.nanoTime())
                 }
             }
