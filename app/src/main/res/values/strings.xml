@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">Speet</string>
-  <string name="hello">Hello, Speet!\n作者：Vitity</string>
+  <string name="module_description">A LSPosed module for time manipulation</string>
+  <string name="permission_required">Overlay permission is required</string>
 </resources> 
