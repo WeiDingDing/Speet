@@ -1,15 +1,15 @@
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace 'com.speet.app'
+    namespace 'com.speet'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.speet.app"
-        minSdk 21
+        applicationId "com.speet"
+        minSdk 24
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -24,20 +24,26 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = '17'
+        jvmTarget = '1.8'
     }
 }
 
+repositories {
+    google()
+    mavenCentral()
+    maven { url 'https://api.xposed.info/' }
+}
+
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.22"
     implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     
     // LSPosed API
     compileOnly 'de.robv.android.xposed:api:82'
