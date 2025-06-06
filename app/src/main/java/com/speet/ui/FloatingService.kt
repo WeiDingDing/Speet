@@ -4,7 +4,6 @@ import android.app.Service
 import android.content.Intent
 import android.os.IBinder
 import android.view.WindowManager
-import android.widget.FrameLayout
 import com.speet.core.TimeController
 
 class FloatingService : Service() {
