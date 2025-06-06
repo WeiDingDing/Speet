@@ -21,11 +21,11 @@
 
   <application
     android:allowBackup="true"
-    android:label="Speet"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
-    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-    android:hardwareAccelerated="true"
-    android:debuggable="false">
+    android:theme="@style/Theme.Speet">
 
     <!-- LSPosed 模块声明 -->
     <meta-data
@@ -33,7 +33,7 @@
       android:value="true" />
     <meta-data
       android:name="xposeddescription"
-      android:value="游戏变速器" />
+      android:value="@string/module_description" />
     <meta-data
       android:name="xposedminversion"
       android:value="82" />
@@ -42,10 +42,8 @@
       android:resource="@array/xposed_scope" />
 
     <activity
-      android:name=".MainActivity"
-      android:exported="true"
-      android:configChanges="orientation|keyboardHidden"
-      android:launchMode="singleTop">
+      android:name=".ui.MainActivity"
+      android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
@@ -54,7 +52,7 @@
 
     <!-- 悬浮窗服务 -->
     <service
-      android:name=".service.FloatingService"
+      android:name=".ui.FloatingService"
       android:enabled="true"
       android:exported="false" />
 
